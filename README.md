@@ -1,4 +1,4 @@
-# Brelox Technologies — Next.js Website
+# Brelox Technologies — Website
 
 Complete, 100% mobile-responsive Next.js (App Router + TypeScript + Tailwind CSS + Framer Motion) website for **Brelox Technologies**.
 
@@ -39,3 +39,4 @@ Sampled directly from the Brelox Technologies logo:
 - **Theme Colors**: Edit `tailwind.config.ts` (`storm`, `matte`, `safety`).
 - **Contact Form Delivery**: Connect your preferred email/notification provider (e.g., Resend, SMTP, or webhook) inside `src/app/api/contact/route.ts`.
 - **Logo Assets**: Clean transparent PNG logo is at `public/images/brelox-logo.png`, and the app favicon is at `src/app/icon.png`.
+
