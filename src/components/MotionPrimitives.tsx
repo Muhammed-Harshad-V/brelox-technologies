@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
+import { useAnimation } from "@/components/AnimationProvider";
 
 interface FadeInProps {
   children: ReactNode;
@@ -19,15 +20,20 @@ export function FadeIn({
   className,
 }: FadeInProps) {
   const prefersReduced = useReducedMotion();
+  const { shouldAnimate } = useAnimation();
+
+  if (!shouldAnimate || prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
-      initial={prefersReduced ? { opacity: 1 } : { opacity: 0, y }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{
-        duration: prefersReduced ? 0 : duration,
-        delay: prefersReduced ? 0 : delay,
+        duration,
+        delay,
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
@@ -49,6 +55,11 @@ export function StaggerContainer({
   staggerDelay = 0.08,
 }: StaggerContainerProps) {
   const prefersReduced = useReducedMotion();
+  const { shouldAnimate } = useAnimation();
+
+  if (!shouldAnimate || prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
@@ -59,7 +70,7 @@ export function StaggerContainer({
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: prefersReduced ? 0 : staggerDelay,
+            staggerChildren: staggerDelay,
           },
         },
       }}
@@ -77,16 +88,21 @@ interface StaggerItemProps {
 
 export function StaggerItem({ children, className }: StaggerItemProps) {
   const prefersReduced = useReducedMotion();
+  const { shouldAnimate } = useAnimation();
+
+  if (!shouldAnimate || prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
       variants={{
-        hidden: prefersReduced ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 },
+        hidden: { opacity: 0, y: 16 },
         visible: {
           opacity: 1,
           y: 0,
           transition: {
-            duration: prefersReduced ? 0 : 0.45,
+            duration: 0.45,
             ease: [0.22, 1, 0.36, 1],
           },
         },

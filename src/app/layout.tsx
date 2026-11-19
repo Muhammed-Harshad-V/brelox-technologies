@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { AnimationProvider } from "@/components/AnimationProvider";
 import { SITE_CONFIG } from "@/lib/site-data";
 
 const inter = Inter({
@@ -57,9 +58,11 @@ export default function RootLayout({
       className={`${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen flex flex-col overflow-x-hidden bg-storm-100 text-matte-900">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <AnimationProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AnimationProvider>
       </body>
     </html>
   );

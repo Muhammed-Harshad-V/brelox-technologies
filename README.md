@@ -13,7 +13,7 @@ Sampled directly from the Brelox Technologies logo:
 - `/` — **Home**: Hero with capability matrix, 6 core services overview, 4-step engineering process, principles, and direct CTA.
 - `/services` — **Services**: Detailed breakdown of Website Development, Web Applications, Mobile Applications, Custom Software, AI Solutions, and Cloud & Infrastructure, plus tech stack.
 - `/about` — **About**: Remote-first studio ethos, core principles, and delivery model.
-- `/contact` — **Contact**: Direct click-to-call, WhatsApp, and copy buttons for `+91 98090 01008` (Primary) and `+91 77369 56379` (Secondary), plus a validated inquiry form backed by `/api/contact`. No physical address is referenced anywhere.
+- `/contact` — **Contact**: Direct click-to-call, WhatsApp, and copy buttons for `+91 77369 56379` (Direct Line), plus a validated inquiry form that redirects to WhatsApp with pre-filled details. No physical address is referenced anywhere.
 
 ## Getting Started
 

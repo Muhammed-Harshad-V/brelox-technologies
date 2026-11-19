@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Brelox Technologies directly by phone (+91 98090 01008 or +91 77369 56379) or submit a project inquiry online.",
+    "Contact Brelox Technologies directly by phone (+91 77369 56379) or submit a project inquiry online.",
 };
 
 export default function ContactPage() {
@@ -27,7 +27,7 @@ export default function ContactPage() {
               </h1>
               <p className="text-base leading-relaxed text-storm-700 sm:text-lg">
                 We operate fully remotely so you can reach us directly without
-                delay. Call either of our numbers below or send your project
+                delay. Call our direct line below or send your project
                 details through the inquiry form.
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
               <FadeIn>
                 <div className="space-y-1.5 lg:min-h-[58px]">
                   <h2 className="text-xl font-bold text-matte-950">
-                    Direct Phone Lines
+                    Direct Phone Line
                   </h2>
                   <p className="text-sm text-storm-600">
                     Reach us directly via phone call or WhatsApp for quick
@@ -63,6 +63,29 @@ export default function ContactPage() {
                     <PhoneCard phone={phone} className="h-full" />
                   </FadeIn>
                 ))}
+
+                <FadeIn delay={0.16} className="flex-1 flex flex-col">
+                  <div className="rounded-2xl border border-storm-300 bg-storm-50 p-6 shadow-sm flex-1 flex flex-col justify-between">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-storm-700">
+                        <span className="h-2 w-2 rounded-full bg-safety-500 animate-pulse" />
+                        <span>Fast Response Commitment</span>
+                      </div>
+                      <p className="text-sm leading-relaxed text-storm-700">
+                        Message or call us directly on{" "}
+                        <span className="font-mono font-semibold text-matte-950">
+                          +91 77369 56379
+                        </span>
+                        . We typically respond within 1–2 business hours for project scoping, technical consultations, and estimates.
+                      </p>
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t border-storm-200/80 flex items-center justify-between text-xs text-storm-600">
+                      <span>Mon – Sat: 9:00 AM – 7:00 PM IST</span>
+                      <span className="font-medium text-safety-600">WhatsApp Available</span>
+                    </div>
+                  </div>
+                </FadeIn>
               </div>
             </div>
 
