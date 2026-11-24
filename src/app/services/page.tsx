@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import {
   FadeIn,
   StaggerContainer,
   StaggerItem,
 } from "@/components/MotionPrimitives";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { SERVICES, SITE_CONFIG, TECH_STACK } from "@/lib/site-data";
+import { SERVICES, TECH_STACK } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  const primaryPhone = SITE_CONFIG.phones[0];
 
   return (
     <div className="bg-storm-100">
@@ -251,16 +250,6 @@ export default function ServicesPage() {
                   <span>Contact Us</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
-                <a
-                  href={primaryPhone.href}
-                  className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl border border-matte-700 bg-matte-950 px-5 py-2.5 font-mono text-sm font-semibold text-storm-100 hover:border-safety-500/70"
-                >
-                  <Phone
-                    className="h-4 w-4 text-safety-500"
-                    aria-hidden="true"
-                  />
-                  <span>{primaryPhone.display}</span>
-                </a>
               </div>
             </div>
           </FadeIn>

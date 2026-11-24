@@ -34,12 +34,20 @@ export const SITE_CONFIG = {
     "Brelox Technologies is a remote-first software engineering studio specializing in websites, web applications, mobile apps, custom software, AI solutions, and cloud infrastructure.",
   phones: [
     {
-      label: "Direct Line",
+      label: "Primary Line",
       role: "Project Inquiries & Technical Consultations",
       display: "+91 77369 56379",
       href: "tel:+917736956379",
       rawDigits: "917736956379",
       isPrimary: true,
+    },
+    {
+      label: "Secondary Line",
+      role: "Support & Direct Consultations",
+      display: "+91 98090 01008",
+      href: "tel:+919809001008",
+      rawDigits: "919809001008",
+      isPrimary: false,
     },
   ] satisfies PhoneContact[],
 } as const;

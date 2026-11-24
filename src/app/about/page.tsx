@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import {
   FadeIn,
   StaggerContainer,
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const primaryPhone = SITE_CONFIG.phones[0];
 
   return (
     <div className="bg-storm-100">
@@ -207,16 +206,6 @@ export default function AboutPage() {
                     <span>Get in Touch</span>
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
-                  <a
-                    href={primaryPhone.href}
-                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-matte-900 bg-matte-900 px-6 py-3 font-mono text-sm font-semibold text-white hover:bg-matte-800 transition-colors"
-                  >
-                    <Phone
-                      className="h-4 w-4 text-safety-500"
-                      aria-hidden="true"
-                    />
-                    <span>{primaryPhone.display}</span>
-                  </a>
                 </div>
               </div>
             </div>

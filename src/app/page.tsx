@@ -3,7 +3,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
-  Phone,
   Layers,
   ShieldCheck,
   Zap,
@@ -19,11 +18,9 @@ import {
   CORE_PRINCIPLES,
   PROCESS_STEPS,
   SERVICES,
-  SITE_CONFIG,
 } from "@/lib/site-data";
 
 export default function HomePage() {
-  const primaryPhone = SITE_CONFIG.phones[0];
 
   return (
     <div className="bg-storm-100">
@@ -136,25 +133,20 @@ export default function HomePage() {
                   </div>
 
                   <div className="mt-6 rounded-xl border border-matte-700 bg-matte-950/90 p-4">
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-storm-400">
-                      Direct Engineering Line
-                    </p>
-                    <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-                      <a
-                        href={primaryPhone.href}
-                        className="inline-flex items-center gap-2 font-mono text-base font-bold text-white hover:text-safety-400 transition-colors"
-                      >
-                        <Phone
-                          className="h-4 w-4 text-safety-500"
-                          aria-hidden="true"
-                        />
-                        <span>{primaryPhone.display}</span>
-                      </a>
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p className="font-mono text-[11px] uppercase tracking-wider text-storm-400">
+                          Direct Engineering Contact
+                        </p>
+                        <p className="text-xs text-storm-300 mt-0.5">
+                          Reach us directly via phone, WhatsApp, or online inquiry.
+                        </p>
+                      </div>
                       <Link
                         href="/contact"
-                        className="text-xs font-semibold text-safety-400 hover:text-safety-500"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-matte-700 bg-matte-800 px-3.5 py-1.5 text-xs font-semibold text-safety-400 transition-colors hover:border-safety-500/70 hover:text-white"
                       >
-                        All contact options &rarr;
+                        <span>Contact Page &rarr;</span>
                       </Link>
                     </div>
                   </div>
@@ -355,16 +347,6 @@ export default function HomePage() {
                     <span>Start a Conversation</span>
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
-                  <a
-                    href={primaryPhone.href}
-                    className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-xl border border-matte-700 bg-matte-950 px-6 py-3 font-mono text-sm font-semibold text-storm-100 transition-colors hover:border-safety-500/70 hover:text-white"
-                  >
-                    <Phone
-                      className="h-4 w-4 text-safety-500"
-                      aria-hidden="true"
-                    />
-                    <span>{primaryPhone.display}</span>
-                  </a>
                 </div>
               </div>
             </div>
